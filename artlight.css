@@ -1,0 +1,455 @@
+```css
+/* =========================
+   RESET DASAR
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f3f8f2;
+    color: #263b2c;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.nav {
+    width: 100%;
+    min-height: 80px;
+    background: #164b35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 6%;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-dropdown a:hover {
+    color: #a8e6b5;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+/* =========================
+   JUDUL HALAMAN
+========================= */
+h1 {
+    text-align: center;
+    color: #164b35;
+    font-size: 35px;
+    margin: 45px 15px 25px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   GAMBAR PRODUK
+========================= */
+body > div[style*="text-align: center"] {
+    text-align: center;
+    margin: 20px auto 45px;
+    padding: 0 15px;
+}
+
+body > div[style*="text-align: center"] img {
+    width: 400px;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   JUDUL MATERI
+========================= */
+body > h2,
+.total-biaya h2 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto 12px;
+    padding: 12px 20px;
+    color: #164b35;
+    font-size: 23px;
+    background: #e1f0e2;
+    border-left: 6px solid #4caf50;
+    border-radius: 6px;
+}
+
+/* =========================
+   PARAGRAF
+========================= */
+body > p {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    padding: 20px 24px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    text-align: justify;
+}
+
+/* =========================
+   DAFTAR LIST
+========================= */
+body > ol,
+body > ul,
+body > p ol,
+body > p ul {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 20px 25px 20px 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+li {
+    padding: 5px 0;
+    color: #344b3b;
+}
+
+li::marker {
+    color: #32834b;
+}
+
+/* =========================
+   TOTAL BIAYA
+========================= */
+.total-biaya {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 60px;
+    padding: 25px;
+    background: #e5f3e6;
+    border: 1px solid #b9d9bd;
+    border-radius: 15px;
+}
+
+.total-biaya h2 {
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0 0 12px;
+    background: transparent;
+    border-left: none;
+    border-bottom: 2px solid #4caf50;
+}
+
+.total-biaya p {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: none;
+    text-align: left;
+}
+
+.total-biaya strong {
+    color: #16713b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    width: 100%;
+    background: #123d2b;
+    color: white;
+    margin-top: 70px;
+    padding: 45px 7% 0;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.footer h3 {
+    color: #c5e8ce;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.footer h4 {
+    color: #c5e8ce;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.footer h5 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #e0eee4;
+    font-size: 14px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 15px;
+    text-align: left;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-nav a:hover {
+    color: #9ee6ae;
+}
+
+.member-footer {
+    margin-bottom: 18px;
+}
+
+.footer-contact p {
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.footer-contact a {
+    color: #e0eee4;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #9ee6ae;
+}
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 35px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #d6e8dc;
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-dialog {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+@media (max-width: 900px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+@media (max-width: 650px) {
+    .nav {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: #164b35;
+        padding: 15px 25px;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+
+    .nav-dropdown.show {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    body > h2 {
+        font-size: 20px;
+    }
+
+    body > p,
+    body > ol,
+    body > ul {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    body > div[style*="text-align: center"] img {
+        height: auto;
+        max-height: 500px;
+    }
+
+    .total-biaya {
+        padding: 18px;
+    }
+
+    .footer {
+        padding: 35px 7% 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+    }
+}
+```

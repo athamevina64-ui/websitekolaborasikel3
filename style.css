@@ -1,0 +1,984 @@
+/* =====================================
+   SMART WASTE, SMART FUTURE
+   TEMA HIJAU NATURAL
+===================================== */
+
+:root {
+    --hijau-tua: #123d2b;
+    --hijau: #267a4d;
+    --hijau-muda: #a3d900;
+    --sage: #dcebdd;
+    --putih: #ffffff;
+    --background: #f6faf4;
+    --text: #263b2e;
+    --abu: #647568;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.nav {
+    width: 100%;
+    min-height: 76px;
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--hijau-tua);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a,
+.nav-dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-dropdown a:hover {
+    color: #b9e58a;
+}
+
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+/* =====================================
+   HERO / BERANDA
+   SESUAI FOTO REFERENSI
+===================================== */
+
+.hero {
+    position: relative;
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--hijau-tua);
+}
+
+.hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 75px 10%;
+    background: linear-gradient(
+        90deg,
+        rgba(5,43,25,0.94) 0%,
+        rgba(8,61,34,0.78) 43%,
+        rgba(8,61,34,0.15) 100%
+    );
+}
+
+.hero-text {
+    max-width: 670px;
+    color: white;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 9px 19px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.17);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin-bottom: 22px;
+    color: white;
+    font-size: clamp(42px,5.5vw,68px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #b5e36b;
+}
+
+.hero p {
+    max-width: 550px;
+    margin-bottom: 28px;
+    color: #f1f7ef;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.button-primary {
+    background: var(--hijau-muda);
+    color: #183b20;
+    border: 2px solid var(--hijau-muda);
+}
+
+.button-primary:hover {
+    background: white;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.button-quiet {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.button-quiet:hover {
+    background: white;
+    color: var(--hijau-tua);
+}
+
+/* =====================================
+   LATAR BELAKANG
+===================================== */
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 85px 9%;
+}
+
+.content-left {
+    width: 100%;
+    max-width: 900px;
+    padding: 42px;
+    text-align: center;
+    background: white;
+    border-left: 6px solid var(--hijau);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(24,76,43,0.08);
+}
+
+.content-left h2 {
+    margin-bottom: 17px;
+    color: var(--hijau-tua);
+    font-size: 30px;
+}
+
+.content-left p {
+    color: var(--abu);
+    font-size: 14px;
+}
+
+/* =====================================
+   TUJUAN DAN PERMASALAHAN
+===================================== */
+
+#masalah {
+    padding: 75px 8%;
+    background: #eaf3e8;
+}
+
+.masalah {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.masalah-header {
+    margin-bottom: 38px;
+    text-align: center;
+}
+
+.masalah-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--hijau);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.masalah-header h2 {
+    margin-bottom: 15px;
+    color: var(--hijau-tua);
+    font-size: 32px;
+}
+
+.masalah-header ul {
+    display: inline-block;
+    padding-left: 22px;
+    color: var(--abu);
+    text-align: left;
+    font-size: 14px;
+}
+
+.solusi-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+.solusi-card {
+    padding: 30px;
+    background: white;
+    border: 1px solid #dcebdd;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(24,76,43,0.06);
+    transition: 0.3s;
+}
+
+.solusi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(24,76,43,0.12);
+}
+
+.solusi-icon {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    background: var(--sage);
+    color: var(--hijau);
+    font-size: 21px;
+}
+
+.solusi-card h3 {
+    margin-bottom: 12px;
+    color: var(--hijau-tua);
+    font-size: 18px;
+}
+
+.solusi-card p,
+.solusi-card li {
+    color: var(--abu);
+    font-size: 13px;
+}
+
+.solusi-card ol {
+    padding-left: 20px;
+}
+
+/* =====================================
+   PRODUK KAMI
+===================================== */
+
+.produk {
+    padding: 85px 7%;
+    background: var(--background);
+}
+
+.produk-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.produk-header h2 {
+    margin-bottom: 10px;
+    color: var(--hijau-tua);
+    font-size: 32px;
+}
+
+.section-intro {
+    color: var(--abu);
+    font-size: 14px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+}
+
+.card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e0eae0;
+    border-radius: 17px;
+    box-shadow: 0 5px 18px rgba(24,76,43,0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(24,76,43,0.13);
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background: var(--sage);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.product-category {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--sage);
+    color: var(--hijau);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: var(--hijau-tua);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card-content p {
+    margin-bottom: 18px;
+    color: var(--abu);
+    font-size: 12px;
+}
+
+.product-action {
+    color: var(--hijau);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.product-action:hover {
+    color: #77a94c;
+}
+
+.product-contact {
+    display: table;
+    margin: 40px auto 0;
+}
+
+.button-outline {
+    border: 2px solid var(--hijau);
+    color: var(--hijau);
+    background: transparent;
+}
+
+.button-outline:hover {
+    background: var(--hijau);
+    color: white;
+}
+
+/* =====================================
+   MATA PELAJARAN
+===================================== */
+
+#mapel {
+    padding: 80px 7%;
+    background: #eaf3e8;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    color: var(--hijau-tua);
+    text-align: center;
+    font-size: 32px;
+}
+
+.mapel-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mapel-block {
+    margin-bottom: 45px;
+}
+
+.mapel-name {
+    margin-bottom: 8px;
+    padding-left: 15px;
+    border-left: 5px solid var(--hijau);
+    color: var(--hijau-tua);
+    font-size: 22px;
+}
+
+.mapel-block > p {
+    margin-bottom: 20px;
+    color: var(--abu);
+    font-size: 13px;
+}
+
+.mapel-gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+/* =====================================
+   ANGGOTA KELOMPOK
+===================================== */
+
+.team {
+    padding: 85px 8%;
+    text-align: center;
+    background: var(--background);
+}
+
+.team > h2 {
+    margin-bottom: 40px;
+    color: var(--hijau-tua);
+    font-size: 32px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.member {
+    padding: 30px 20px;
+    background: white;
+    border: 1px solid #e0eae0;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(24,76,43,0.07);
+    transition: 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-6px);
+}
+
+.member img {
+    width: 115px;
+    height: 115px;
+    margin-bottom: 15px;
+    border: 5px solid var(--sage);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member h3 {
+    margin-bottom: 5px;
+    color: var(--hijau-tua);
+    font-size: 15px;
+}
+
+.member p {
+    color: var(--abu);
+    font-size: 12px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 18px;
+}
+
+.icons a {
+    display: flex;
+    width: 37px;
+    height: 37px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--hijau);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    background: var(--hijau);
+    color: white;
+}
+
+/* =====================================
+   KONTAK
+===================================== */
+
+.contact {
+    padding: 80px 8%;
+    background: #eaf3e8;
+}
+
+.contact > h2 {
+    color: var(--hijau-tua);
+    text-align: center;
+    font-size: 32px;
+}
+
+.contact > p {
+    margin: 10px 0 40px;
+    color: var(--abu);
+    text-align: center;
+    font-size: 13px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-form,
+.contact-info {
+    padding: 30px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(24,76,43,0.06);
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dce8dc;
+    border-radius: 10px;
+    outline: none;
+    background: #f8fbf7;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--hijau);
+    box-shadow: 0 0 0 3px rgba(38,122,77,0.10);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--hijau);
+    color: white;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background: var(--hijau-tua);
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    color: var(--hijau-tua);
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+    color: var(--abu);
+    font-size: 13px;
+}
+
+.contact-info a {
+    color: var(--hijau);
+    text-decoration: none;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    padding: 55px 8% 0;
+    background: #123d2b;
+    color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.footer-brand h3 {
+    margin: 15px 0 10px;
+    font-size: 19px;
+}
+
+.footer p {
+    color: #c3d8c8;
+    font-size: 12px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    color: #b9e3bd;
+    font-size: 17px;
+}
+
+.member-footer {
+    margin-bottom: 20px;
+}
+
+.member-footer h5 {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    color: #c5e8ca;
+    font-size: 17px;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    margin-bottom: 15px;
+}
+
+.footer-contact a {
+    color: #c5e8ca;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 45px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+/* =====================================
+   LIGHTBOX GAMBAR
+===================================== */
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.88);
+}
+
+.lightbox-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: var(--hijau);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* =====================================
+   RESPONSIVE HP
+===================================== */
+
+@media (max-width: 650px) {
+
+    .nav {
+        min-height: 65px;
+        padding: 10px 5%;
+    }
+
+    .logo {
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .logo img {
+        width: 37px;
+        height: 37px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        border-radius: 5px;
+        background: white;
+    }
+
+    .nav-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px 6%;
+        flex-direction: column;
+        gap: 17px;
+        background: var(--hijau-tua);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
+    .nav-dropdown.active {
+        display: flex;
+    }
+
+    .hero,
+    .hero-overlay {
+        min-height: 500px;
+    }
+
+    .hero-overlay {
+        padding: 55px 7%;
+        background: linear-gradient(
+            90deg,
+            rgba(5,43,25,0.94),
+            rgba(8,61,34,0.72)
+        );
+    }
+
+    .hero h1 {
+        font-size: clamp(37px,10vw,48px);
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .main,
+    .produk,
+    .team,
+    .contact,
+    #mapel,
+    #masalah {
+        padding: 55px 5%;
+    }
+
+    .content-left {
+        padding: 25px;
+    }
+
+    .content-left h2,
+    .masalah-header h2,
+    .produk-header h2,
+    .team > h2,
+    .contact > h2,
+    .section-title {
+        font-size: 25px;
+    }
+
+    .solusi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 140px;
+    }
+
+    .card-content {
+        padding: 13px;
+    }
+
+    .card-content h3 {
+        font-size: 13px;
+    }
+
+    .card-content p {
+        font-size: 11px;
+    }
+
+    .mapel-gallery {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        gap: 12px;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 45px 7% 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

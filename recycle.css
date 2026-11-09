@@ -1,0 +1,623 @@
+```css
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f5f8f5;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* NAVBAR */
+.nav {
+    width: 100%;
+    min-height: 80px;
+    background: #174d35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.logo-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-dropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-dropdown a:hover {
+    color: #a8dfbd;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+/* JUDUL */
+h1 {
+    text-align: center;
+    color: #174d35;
+    font-size: 35px;
+    font-weight: 800;
+    margin: 45px 15px 25px;
+}
+
+/* GAMBAR PRODUK */
+body > div[style*="text-align: center"] {
+    margin: 20px auto 45px;
+}
+
+body > div[style*="text-align: center"] img {
+    width: 500px;
+    max-width: 90%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 18px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+body > div[style*="text-align: center"] img:hover {
+    transform: scale(1.02);
+}
+
+/* JUDUL BAGIAN */
+h2 {
+    color: #174d35;
+    font-size: 25px;
+    margin: 35px 8% 12px;
+    padding-left: 15px;
+    border-left: 5px solid #4c956c;
+}
+
+/* PARAGRAF */
+p {
+    margin: 0 8% 20px;
+    text-align: justify;
+    font-size: 15px;
+    color: #444;
+}
+
+p b {
+    color: #174d35;
+}
+
+/* LIST */
+ul,
+ol {
+    margin: 10px 10% 25px;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+li::marker {
+    color: #28734b;
+    font-weight: bold;
+}
+
+/* DAFTAR BERTINGKAT */
+ul ul {
+    margin: 5px 0 10px 20px;
+}
+
+/* LANGKAH PEMBUATAN */
+h2 + p {
+    line-height: 2;
+}
+
+/* BAGIAN BIAYA */
+h2 + p br {
+    line-height: 2;
+}
+
+/* FOOTER */
+.footer {
+    background: #123d2c;
+    color: white;
+    padding: 45px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-brand,
+.footer-team,
+.footer-contact {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.footer h3 {
+    color: #b7e4c7;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.footer h4 {
+    color: #b7e4c7;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.footer h5 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #e0e0e0;
+    font-size: 13px;
+    margin: 0 0 15px;
+    text-align: left;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-nav a:hover {
+    color: #95d5b2;
+}
+
+/* ANGGOTA */
+.member-footer {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: #286348;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #95d5b2;
+    color: #123d2c;
+    transform: translateY(-3px);
+}
+
+/* KONTAK */
+./* ==============================
+   FOOTER
+============================== */
+/* FIX FOOTER FULL SCREEN */
+.footer {
+    position: relative;
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    display: block;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer {
+    width: 100%;
+    display: block;
+    background: linear-gradient(
+        110deg,
+        #003d2e,
+        #00291f,
+        #001b16
+    );
+    color: white;
+    margin: 60px 0 0;
+    padding: 45px 4% 20px;
+}
+
+/* CONTAINER */
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1.1fr 1fr;
+    gap: 55px;
+    align-items: start;
+}
+
+/* KOLOM KIRI */
+.footer-brand {
+    padding-top: 5px;
+}
+
+.footer-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 55px;
+}
+
+.footer-brand h3 {
+    font-size: 19px;
+    color: #d9f5bd;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #eeeeee;
+    margin: 0 0 22px;
+    text-align: left;
+}
+
+/* NAVIGASI */
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-nav a:hover {
+    color: #b5e88b;
+}
+
+/* ANGGOTA KELOMPOK */
+.footer-team h4,
+.footer-contact h4 {
+    color: #d9f5bd;
+    font-size: 21px;
+    margin-bottom: 28px;
+}
+
+.member-footer {
+    margin-bottom: 25px;
+}
+
+.member-footer h5 {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* KONTAK */
+.footer-contact p {
+    color: #eeeeee;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+    text-align: left;
+}
+
+.footer-contact i {
+    color: #d9f5bd;
+    margin-right: 7px;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: #b5e88b;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    width: 100%;
+    margin: 55px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #eeeeee;
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 650px) {
+    .footer {
+        padding: 35px 6% 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-logo {
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+/* LIGHTBOX */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-dialog {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 12px;
+}
+
+.lightbox-close {
+    position: absolute;
+    right: -15px;
+    top: -35px;
+    font-size: 35px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* RESPONSIVE TABLET DAN HP */
+@media screen and (max-width: 768px) {
+
+    .nav {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 13px;
+    }
+
+    .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: #174d35;
+        padding: 15px 25px;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+
+    .nav-dropdown.active {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 21px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    p {
+        font-size: 14px;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    body > div[style*="text-align: center"] img {
+        width: 90%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    ul,
+    ol {
+        margin-left: 8%;
+        margin-right: 6%;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 35px 6% 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
+
+/* RESPONSIVE HP KECIL */
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .logo {
+        font-size: 11px;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    li {
+        font-size: 13px;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    .footer h4 {
+        font-size: 17px;
+    }
+}
+```
